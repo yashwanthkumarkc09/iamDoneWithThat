@@ -186,7 +186,94 @@ public class exportPPScript extends  AllActions {
         {
         try
         {
-            actions.EnterData(new exportPage(driver).userName,"yashwanth");
+            actions.EnterApplicationURL("www.opal.com");
+
+            String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();
+        actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption);
+        Reporter.log(browserName);
+        Reporter.log(browserVersion);
+        Reporter.log(actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption));
+            }
+        catch(Exception e)
+        {
+        String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();     
+        actions.CaptureOnFailure(path1,methodName,failScreenshotoption);
+        Reporter.log(browserName);
+        Reporter.log(browserVersion);
+        Reporter.log(actions.CaptureOnFailure(path1,methodName,failScreenshotoption));
+        e.printStackTrace();
+        actions.captureDOM(path,fileName);
+        actions.stopVideoRecord();
+        actions.CloseCurrentTab();
+        driver.get().quit();
+        throw e;
+        } 
+        };
+
+            @Test(priority=6)
+        public void step_6() throws Exception
+        {
+        try
+        {
+            actions.EnterData(new exportPage(driver).userName,"userNameValue");
+
+            String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();
+        actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption);
+        Reporter.log(browserName);
+        Reporter.log(browserVersion);
+        Reporter.log(actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption));
+            }
+        catch(Exception e)
+        {
+        String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();     
+        actions.CaptureOnFailure(path1,methodName,failScreenshotoption);
+        Reporter.log(browserName);
+        Reporter.log(browserVersion);
+        Reporter.log(actions.CaptureOnFailure(path1,methodName,failScreenshotoption));
+        e.printStackTrace();
+        actions.captureDOM(path,fileName);
+        actions.stopVideoRecord();
+        actions.CloseCurrentTab();
+        driver.get().quit();
+        throw e;
+        } 
+        };
+
+            @Test(priority=7)
+        public void step_7() throws Exception
+        {
+        try
+        {
+            actions.EnterData(new exportPage(driver).userPassword,"userPasswordValue");
+
+            String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();
+        actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption);
+        Reporter.log(browserName);
+        Reporter.log(browserVersion);
+        Reporter.log(actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption));
+            }
+        catch(Exception e)
+        {
+        String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();     
+        actions.CaptureOnFailure(path1,methodName,failScreenshotoption);
+        Reporter.log(browserName);
+        Reporter.log(browserVersion);
+        Reporter.log(actions.CaptureOnFailure(path1,methodName,failScreenshotoption));
+        e.printStackTrace();
+        actions.captureDOM(path,fileName);
+        actions.stopVideoRecord();
+        actions.CloseCurrentTab();
+        driver.get().quit();
+        throw e;
+        } 
+        };
+
+            @Test(priority=8)
+        public void step_8() throws Exception
+        {
+        try
+        {
+            actions.Click(new exportPage(driver).userLogin);
 
             String methodName=Thread.currentThread().getStackTrace()[1].getMethodName();
         actions.CaptureScreenShotAtEachStep(path,methodName,screenshotOption);
